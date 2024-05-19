@@ -1,0 +1,36 @@
+// 타입스크립트 실행하려면 tsx -w 터미널에 입력
+var 문자열_js = 'str';
+var 문자열 = 'src'; // string, number, boolean... 간단한건 생략 (초기값을 보고 타입 정해줌)
+// 문자열 = 123; // 타입체크 =? 에러! (타입스크립트)
+// 복잡한 타입에 대해서는 명시
+var 문자열과숫자 = 'str';
+문자열과숫자 = 123;
+var 배열 = [1, 2, 3]; // number[]
+// fetch 데이터를 받아온다. [] => [data, data] : 문자열 또는 숫자
+var fetch배열 = [1, '2', '3'];
+function 데이터사용(x) {
+    if (typeof x === 'string') {
+        return x[0] + 1; // 이어붙이기
+    }
+    else if (typeof x === 'number') {
+        return x[0] + 1; // 더하기
+    }
+    else {
+        return 1; // 1 반환
+    }
+}
+데이터사용(fetch배열);
+// 함수의 return이 없으면 void
+// void: 비어있다
+// 숫자를 매개변수로 받아서, 리턴값은 없는 함수
+function 리턴없음(num) {
+    if (num) {
+        console.log(num);
+    }
+    else {
+        console.log('없음');
+    }
+}
+// 타입스크립트는 자바스크립트와는 다르게 매개변수로 만든 만큼 채워줘야 사용가능
+리턴없음(3);
+리턴없음(); // 해당 매개변수에 대해 비워줘도 되게 하고 싶으면 ==> ?

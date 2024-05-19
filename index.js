@@ -27,3 +27,19 @@ var 오브젝트 = {
     _age: 33,
     _adult: true
 };
+// title, btn
+var title = document.getElementById('title');
+var btn = document.getElementById('btn');
+// 버튼 누르면 title태그의 html내용을 '반갑습니다'로 바꿔주자
+// 1. 버튼 아이디 찾아서 클릭 이벤트 넣어준다
+if (btn != null) {
+    btn.addEventListener('click', function () {
+        if (title != null) {
+            title.innerHTML = '반갑습니다';
+        }
+    });
+}
+else {
+    console.log('btn이 없습니다');
+}
+;
