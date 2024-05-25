@@ -25,3 +25,10 @@ namespace 중복방지_네임스페이스 {
 let 변수명10 : 중복방지_네임스페이스.newType = 'str';
 let r = 중복방지_네임스페이스.newVar;
 
+namespace 삼성 {
+  let 부품 = '반도체';
+}
+
+namespace SK {
+  let 부품 = '반도체';
+}
